@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polybius Square Cipher</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <a href="https://en.wikipedia.org/wiki/Polybius_square">What polybius square cipher is?</a>
+    </header>
+    <div class="container">
+        <h1>Polybius Square Cipher</h1>
+        <div class="content-container">
+            <form method="post">
+                <label>Enter message:</label>
+                <input type="text" name="message">
+                <label>Alphabet: </label>
+                <input type="text" name="alphabet" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">
+                <label>Rows: </label>
+                <input type="text" name="rows" value="6">
+                <label>Columns: </label>
+                <input type="text" name="columns" value="6">
+                <button type="submit" name="operation" value="encrypt">Encrypt</button>
+                <button type="submit" name="operation" value="decrypt">Decrypt</button>
+            </form>
+        
+            <p id="result">
+                {% if result %}
+                    Result: {{ result }}
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</body>
+</html>
